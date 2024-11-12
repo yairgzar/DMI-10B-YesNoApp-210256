@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MyMessageBubble extends StatelesslWidget {
-  const MyMessageBubble({super.key});
+class My OtherMessageBubble extends StatelesslWidget {
+  const OtherMessageBubble({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class MyMessageBubble extends StatelesslWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-            color: Colors.primary,
+            color: Colors.secondary,
             borderRadius: BorderRadius.circular(20)
           ),
           child: Padding(
@@ -21,7 +21,17 @@ class MyMessageBubble extends StatelesslWidget {
             child: Text('Hola', style: TextStyle(color: Colors.white ),),
           ),
         )
+        const SizedBox(height: 5),
+        _ImageBubble(),
+        const SizedBox(height: 10),
       ],
     );
   }
+}
+
+class _ImageBubble extends StatelessWidget {
+  @override
+  Widget build(BuildContext context){
+    final  size = MediaQuery.of(context );
+}
 }
