@@ -1,43 +1,63 @@
 import 'package:flutter/material.dart';
-import 'pac';
+import 'package:yes_no_app/domain/entities/message.dart';
 
-class ChatScreen extends StatelessWidget {
-  const ChatScreen({super.key});
+class HerMessageBubble extends StatelessWidget {
+  final Message message;
+
+  const HerMessageBubble({super.key, required this.message});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: CircleAvatar(
-                backgroundImage: NetworkImage(
-                    'https://lumiere-a.akamaihd.net/v1/images/image_222892ce.jpeg?region=0,0,640,480'))),
-        title: Text('Mi Amor'),
-        centerTitle: false,
-      ),
-      body: _ChatView(),
+    final colors = Theme.of(context).colorScheme;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          decoration: BoxDecoration(
+              color: colors.secondary, borderRadius: BorderRadius.circular(20)),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Text(
+              message.text,
+              style: const TextStyle(color: Colors.white),
+            ),
+          ),
+        ),
+        const SizedBox(height: 5),
+        _ImageBubble( message.imageUrl! ),
+        const SizedBox(height: 10),
+      ],
     );
   }
 }
 
-class _ChatView extends StatelessWidget {
+class _ImageBubble extends StatelessWidget {
+  final String imageUrl;
+
+  const _ImageBubble( this.imageUrl );
+
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
-      child: Column(
-        children: [
-          Expanded(
-              child: ListView.builder(
-            itemCount: 100,
-            itemBuilder: (context, index) {
-              return ( index % 2 == 0);
-                ? const HerMessageBubble
-            })),
-        ],
-      ),
-    ));
+    final size = MediaQuery.of(context).size;
+
+    return ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: Image.network(
+          imageUrl,
+          width: size.width * 0.7,
+          height: 150,
+          fit: BoxFit.cover,
+          loadingBuilder: (context, child, loadingProgress) {
+            if (loadingProgress == null) return child;
+
+            return Container(
+              width: size.width * 0.7,
+              height: 150,
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              child: const Text('Mi amor está enviando una imagen'),
+            );
+          },
+        ));
   }
 }
