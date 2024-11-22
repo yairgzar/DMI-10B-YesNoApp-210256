@@ -48,3 +48,10 @@ Aplicación Realizada en Flutter para dispositivos móviles, parte de la unidad 
 ## Resultados
 ![Resultado](https://github.com/yairgzar/DMI-10B-YesNoApp-210256/blob/main/flutter_application_1/lib/img/Resultado.jpeg)
 
+# HISTORIAL DE PRÁCTICAS:
+
+|No. |Nombre |Potenciador |Estatus |
+|--|--|--|--|
+|21|Implementación del Encabezado de la App|6|✅Finalizada|
+|22|Implementación de la UI para la Aplicación de Yes/No|7|✅Finalizada
+|23|Implementación de la Funcionalidad de la Aplicación de Yes/No|10|✅Finalizada|
