@@ -17,7 +17,7 @@ Aplicación Realizada en Flutter para dispositivos móviles, parte de la unidad 
 <h2 align="center"> Documentación del proyecto </h2>
 
 ## Estructura de las carpetas 
-![carpetas](https://github.com/user-attachments/assets/9cb67004-ff60-484f-beb5-5926ca0af197)
+![carpetas](https://github.com/yairgzar/DMI-10B-YesNoApp-210256/blob/Yair-Practica23/flutter_application_1/lib/img/Carpetas.jpeg)
 
 <br>
 <h3> Practica 21 </h3>
@@ -46,5 +46,5 @@ Aplicación Realizada en Flutter para dispositivos móviles, parte de la unidad 
 | <img src="https://github.com/user-attachments/assets/f28107b7-4157-4a42-abe2-20556e076222"  width="300" height="100" style="margin-bottom: 5px;"> |La clase (GetYesNoAnswer) actúa como un puente entre la API de yesno.wtf y la lógica de la aplicación. Realiza solicitudes HTTP, transforma las respuestas en objetos internos, y permite integrar respuestas automáticas en el flujo del chat, completando la experiencia interactiva de la aplicación.| <img src="https://github.com/user-attachments/assets/226e7ef8-7894-4dc0-88bc-f10f6539490c"  width="300" height="100" style="margin-bottom: 5px;"> |El método (moveScrollToBottom) mejora la experiencia de usuario al garantizar que los mensajes más recientes sean visibles sin requerir interacción manual, proporcionando un desplazamiento suave hacia la parte inferior de la lista.|
 
 ## Resultados
-![Resultado](https://github.com/user-attachments/assets/c9dea06d-d79d-4d49-ae3b-3df27716a041)
+![Resultado](https://github.com/yairgzar/DMI-10B-YesNoApp-210256/blob/Yair-Practica23/flutter_application_1/lib/img/Resultado.jpeg)
 
